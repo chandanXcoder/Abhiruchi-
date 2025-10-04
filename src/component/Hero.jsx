@@ -15,7 +15,7 @@ export default function Hero() {
     }, 2000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [rotatingWords.length]);
 
   const scrollToJoin = (e) => {
     e.preventDefault();
