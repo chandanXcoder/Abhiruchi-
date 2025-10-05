@@ -76,7 +76,7 @@ export default function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          The Hobby Club
+          {/* The Hobby Club */}
         </p>
 
         {/* Join Now Button with Delayed Fade-in */}
