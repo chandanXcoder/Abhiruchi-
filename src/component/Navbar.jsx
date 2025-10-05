@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <a href="#home" className="flex items-center space-x-3 group">
                 <img 
-                  src=" abhiruchi.jpg " 
+                  src=" abhiruchi.png " 
                   alt="Abhiruchi Logo" 
                   className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
                 />
