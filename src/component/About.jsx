@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// 🔹 Logos import करो (तुम्हारे पास जो भी logos हैं, उनके सही नाम डाल दो)
+// 🔹 Logos import
 import abhiruchiLogo from "../assets/abhiruchi1.png";
 import panacheLogo from "../assets/panache.png";
 import rockonLogo from "../assets/rockon.png";
@@ -72,7 +72,7 @@ const About = () => {
         <motion.img
           src={abhiruchiLogo}
           alt="Abhiruchi Logo"
-          className="w-56 h-56 sm:w-64 sm:h-64 rounded-full shadow-2xl border-8 border-gray-200 dark:border-gray-700 bg-white p-2 mx-auto mb-8"
+          className="w-56 h-56 sm:w-64 sm:h-64 rounded-full shadow-2xl border-8 border-gray-200 dark:border-gray-700 bg-white p-2 mx-auto mb-8 object-cover"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -113,7 +113,7 @@ const About = () => {
   );
 };
 
-// 🔹 ClubCard Component
+// 🔹 ClubCard Component (Circular, bigger logos, no white background)
 const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
   <motion.div
     initial={{ opacity: 0, x: reverse ? 100 : -100 }}
@@ -125,12 +125,12 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
   >
     {/* Header gradient with logo */}
     <div
-      className={`sm:w-1/3 w-full h-40 sm:h-60 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-3`}
+      className={`sm:w-1/3 w-full h-48 sm:h-72 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-4`}
     >
       <img
         src={logo}
         alt={`${title} Logo`}
-        className="w-16 h-16 rounded-full border-4 border-white shadow-md"
+        className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover shadow-md"
       />
       <h3 className="text-2xl font-bold text-white text-center px-6">
         {title}
