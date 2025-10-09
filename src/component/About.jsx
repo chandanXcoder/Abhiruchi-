@@ -1,6 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+
+// 🔹 Logos import करो (तुम्हारे पास जो भी logos हैं, उनके सही नाम डाल दो)
 import abhiruchiLogo from "../assets/abhiruchi1.png";
+import panacheLogo from "../assets/panache.png";
+import rockonLogo from "../assets/rockon.png";
+import itechLogo from "../assets/itech.png";
+import imagesLogo from "../assets/images.png";
+import strideLogo from "../assets/stride.png";
+import mfactorLogo from "../assets/mfactor.png";
+import triLogo from "../assets/tri.png";
 
 const About = () => {
   const clubs = [
@@ -8,36 +17,43 @@ const About = () => {
       title: "Panache – The Arts Club",
       desc: "Knowledge will only take you from A to Z, but imagination encircles the world. Panache helps students express their creativity through painting, crafts, modeling, and design.",
       gradient: "from-pink-400 to-pink-600",
+      logo: panacheLogo,
     },
     {
       title: "Rock On – The Cultural Club",
       desc: "Joy and happiness come alive through singing and dancing. Rock On encourages students to explore their talents in music and performance.",
       gradient: "from-red-400 to-red-600",
+      logo: rockonLogo,
     },
     {
       title: "I-Tech – The Technical Club",
       desc: "Technology drives the world. I-Tech motivates students to innovate and explore Robotics, IoT, AI, and Ethical Hacking.",
       gradient: "from-blue-400 to-blue-600",
+      logo: itechLogo,
     },
     {
       title: "Images – The Publication Club",
       desc: "The pen is mightier than the sword. Images develops writing and communication skills, encouraging students to publish thought-provoking articles.",
       gradient: "from-green-400 to-green-600",
+      logo: imagesLogo,
     },
     {
       title: "Stride – The Sports Club",
       desc: "All work and no play makes Jack a dull boy. Stride promotes physical fitness and sportsmanship by organizing indoor and outdoor games.",
       gradient: "from-emerald-400 to-emerald-600",
+      logo: strideLogo,
     },
     {
       title: "M-Factor – The Management Club",
       desc: "Strategize, plan, and implement — M-Factor builds managerial and leadership skills through practical learning and teamwork.",
       gradient: "from-cyan-400 to-cyan-600",
+      logo: mfactorLogo,
     },
     {
       title: "The Responsible Invertian – The Social Cause Club",
       desc: "This club inspires students to become responsible citizens by organizing social initiatives that contribute to building a better society.",
       gradient: "from-orange-400 to-orange-600",
+      logo: triLogo,
     },
   ];
 
@@ -80,7 +96,7 @@ const About = () => {
         </p>
       </motion.div>
 
-      {/* 🔹 Club Cards Section (one below another) */}
+      {/* 🔹 Club Cards Section */}
       <div className="max-w-5xl mx-auto flex flex-col gap-16">
         {clubs.map((club, index) => (
           <ClubCard
@@ -88,6 +104,7 @@ const About = () => {
             title={club.title}
             desc={club.desc}
             gradient={club.gradient}
+            logo={club.logo}
             reverse={index % 2 !== 0}
           />
         ))}
@@ -96,7 +113,8 @@ const About = () => {
   );
 };
 
-const ClubCard = ({ title, desc, gradient, reverse }) => (
+// 🔹 ClubCard Component
+const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
   <motion.div
     initial={{ opacity: 0, x: reverse ? 100 : -100 }}
     whileInView={{ opacity: 1, x: 0 }}
@@ -105,10 +123,15 @@ const ClubCard = ({ title, desc, gradient, reverse }) => (
       reverse ? "sm:flex-row-reverse" : ""
     } bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700`}
   >
-    {/* Header gradient */}
+    {/* Header gradient with logo */}
     <div
-      className={`sm:w-1/3 w-full h-40 sm:h-60 bg-gradient-to-br ${gradient} flex items-center justify-center`}
+      className={`sm:w-1/3 w-full h-40 sm:h-60 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-3`}
     >
+      <img
+        src={logo}
+        alt={`${title} Logo`}
+        className="w-16 h-16 rounded-full border-4 border-white shadow-md"
+      />
       <h3 className="text-2xl font-bold text-white text-center px-6">
         {title}
       </h3>
