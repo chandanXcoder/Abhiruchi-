@@ -69,7 +69,7 @@ const About = () => {
         <motion.img
           src={abhiruchiLogo}
           alt="Abhiruchi Logo"
-          className="w-56 h-56 sm:w-64 sm:h-64 rounded-full shadow-2xl border-8 border-gray-100 bg-white p-2 mx-auto mb-8 object-cover"
+          className="w-72 h-72 sm:w-80 sm:h-80 rounded-full shadow-2xl bg-white p-2 mx-auto mb-8 object-cover"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -110,7 +110,7 @@ const About = () => {
   );
 };
 
-// 🔹 ClubCard Component (Light Theme Version)
+// 🔹 ClubCard Component (Updated for bigger logo and border-free)
 const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
   <motion.div
     initial={{ opacity: 0, x: reverse ? 100 : -100 }}
@@ -118,7 +118,7 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
     transition={{ duration: 0.8 }}
     className={`flex flex-col sm:flex-row items-center ${
       reverse ? "sm:flex-row-reverse" : ""
-    } bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-200`}
+    } bg-white rounded-3xl shadow-lg overflow-hidden`}
   >
     {/* Logo + Gradient Header */}
     <div
@@ -127,7 +127,7 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
       <img
         src={logo}
         alt={`${title} Logo`}
-        className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover shadow-md bg-white p-2"
+        className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-md bg-white p-2"
       />
       <h3 className="text-2xl font-bold text-white text-center px-6">{title}</h3>
     </div>
