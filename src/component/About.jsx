@@ -18,54 +18,47 @@ const About = () => {
       desc: "Knowledge will only take you from A to Z, but imagination encircles the world. Panache helps students express their creativity through painting, crafts, modeling, and design.",
       gradient: "from-pink-400 to-pink-500",
       logo: panacheLogo,
-      accent: "top-left",
     },
     {
       title: "Rock On – The Cultural Club",
       desc: "Joy and happiness come alive through singing and dancing. Rock On encourages students to explore their talents in music and performance.",
       gradient: "from-red-400 to-red-500",
       logo: rockonLogo,
-      accent: "top-right",
     },
     {
       title: "I-Tech – The Technical Club",
       desc: "Technology drives the world. I-Tech motivates students to innovate and explore Robotics, IoT, AI, and Ethical Hacking.",
       gradient: "from-blue-400 to-blue-500",
       logo: itechLogo,
-      accent: "bottom-left",
     },
     {
       title: "Images – The Publication Club",
       desc: "The pen is mightier than the sword. Images develops writing and communication skills, encouraging students to publish thought-provoking articles.",
       gradient: "from-green-400 to-green-500",
       logo: imagesLogo,
-      accent: "bottom-right",
     },
     {
       title: "Stride – The Sports Club",
       desc: "All work and no play makes Jack a dull boy. Stride promotes physical fitness and sportsmanship by organizing indoor and outdoor games.",
       gradient: "from-emerald-400 to-emerald-500",
       logo: strideLogo,
-      accent: "top-left",
     },
     {
       title: "M-Factor – The Management Club",
       desc: "Strategize, plan, and implement — M-Factor builds managerial and leadership skills through practical learning and teamwork.",
       gradient: "from-cyan-400 to-cyan-500",
       logo: mfactorLogo,
-      accent: "bottom-right",
     },
     {
       title: "The Responsible Invertian – The Social Cause Club",
       desc: "This club inspires students to become responsible citizens by organizing social initiatives that contribute to building a better society.",
       gradient: "from-orange-400 to-orange-500",
       logo: triLogo,
-      accent: "top-right",
     },
   ];
 
   return (
-    <section id="about" className="bg-white py-20 px-6 text-slate-800">
+    <section id="about" className="bg-white py-20 px-6 text-slate-800 transition-colors duration-300">
       {/* 🔹 Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -95,16 +88,20 @@ const About = () => {
           students’ creativity and innovation for better performance in their
           personal and professional lives. Spearheaded by{" "}
           <strong>Ms. Sonal Gautam</strong>, the Executive Chairperson, this
-          club today stands as an integral part of Invertis University.
+          club today stands as an integral part of Invertis University. Through
+          its events, students showcase their talents beyond academics.
         </p>
       </motion.div>
 
-      {/* 🔹 Club Cards */}
+      {/* 🔹 Club Cards Section */}
       <div className="max-w-5xl mx-auto flex flex-col gap-16">
         {clubs.map((club, index) => (
           <ClubCard
             key={index}
-            {...club}
+            title={club.title}
+            desc={club.desc}
+            gradient={club.gradient}
+            logo={club.logo}
             reverse={index % 2 !== 0}
           />
         ))}
@@ -113,48 +110,33 @@ const About = () => {
   );
 };
 
-// 🔹 ClubCard Component (Dynamic / Unique Styles)
-const ClubCard = ({ title, desc, gradient, logo, reverse, accent }) => {
-  // Accent background styles
-  const accentStyles = {
-    "top-left": "before:top-0 before:left-0 before:rotate-0",
-    "top-right": "before:top-0 before:right-0 before:-rotate-12",
-    "bottom-left": "before:bottom-0 before:left-0 before:-rotate-12",
-    "bottom-right": "before:bottom-0 before:right-0 before:rotate-12",
-  };
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: reverse ? 100 : -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className={`relative flex flex-col sm:flex-row items-center ${
-        reverse ? "sm:flex-row-reverse" : ""
-      } bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300`}
+// 🔹 ClubCard Component (Light Theme Version)
+const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
+  <motion.div
+    initial={{ opacity: 0, x: reverse ? 100 : -100 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    className={`flex flex-col sm:flex-row items-center ${
+      reverse ? "sm:flex-row-reverse" : ""
+    } bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-200`}
+  >
+    {/* Logo + Gradient Header */}
+    <div
+      className={`sm:w-1/3 w-full h-48 sm:h-72 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-4`}
     >
-      {/* Decorative Accent */}
-      <div
-        className={`absolute w-40 h-40 bg-gradient-to-br ${gradient} opacity-20 rounded-full blur-3xl before:absolute before:w-24 before:h-24 before:bg-white before:opacity-10 before:rounded-full ${accentStyles[accent]}`}
-      ></div>
+      <img
+        src={logo}
+        alt={`${title} Logo`}
+        className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover shadow-md bg-white p-2"
+      />
+      <h3 className="text-2xl font-bold text-white text-center px-6">{title}</h3>
+    </div>
 
-      {/* Logo + Gradient Header */}
-      <div
-        className={`sm:w-1/3 w-full h-48 sm:h-72 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-4 relative z-10`}
-      >
-        <img
-          src={logo}
-          alt={`${title} Logo`}
-          className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover shadow-md bg-white p-2 transform hover:scale-105 transition-transform duration-500"
-        />
-        <h3 className="text-2xl font-bold text-white text-center px-6">{title}</h3>
-      </div>
-
-      {/* Description */}
-      <div className="sm:w-2/3 w-full p-8 bg-gray-50 relative z-10">
-        <p className="text-slate-700 text-lg leading-relaxed">{desc}</p>
-      </div>
-    </motion.div>
-  );
-};
+    {/* Description */}
+    <div className="sm:w-2/3 w-full p-8 bg-gray-50">
+      <p className="text-slate-700 text-lg leading-relaxed">{desc}</p>
+    </div>
+  </motion.div>
+);
 
 export default About;
