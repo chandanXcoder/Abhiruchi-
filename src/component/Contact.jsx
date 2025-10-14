@@ -4,10 +4,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="bg-gray-50 dark:bg-gray-900 py-20 px-6 transition-colors duration-300"
-    >
+    <section id="contact" className="bg-white py-20 px-6 transition-colors duration-300">
       {/* 🔹 Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -15,12 +12,12 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto text-center mb-16"
       >
-        <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-600">
             Contact Us
           </span>
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Have questions, ideas, or feedback? We’d love to hear from you!
           Connect with the Abhiruchi team and let’s create something amazing
           together.
@@ -34,24 +31,22 @@ const Contact = () => {
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-200 dark:border-gray-700"
+          className="bg-white rounded-3xl shadow-xl p-8 border border-gray-200"
         >
-          <h3 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          <h3 className="text-3xl font-bold mb-8 text-gray-900">
             Get in Touch
           </h3>
           <div className="flex items-center gap-4 mb-6">
             <Mail className="w-6 h-6 text-orange-500" />
-            <p className="text-gray-700 dark:text-gray-300">
-              abhiruchi@invertisuniversity.ac.in
-            </p>
+            <p className="text-gray-700">abhiruchi@invertisuniversity.ac.in</p>
           </div>
           <div className="flex items-center gap-4 mb-6">
             <Phone className="w-6 h-6 text-orange-500" />
-            <p className="text-gray-700 dark:text-gray-300">+91 98765 43210</p>
+            <p className="text-gray-700">+91 98765 43210</p>
           </div>
           <div className="flex items-center gap-4">
             <MapPin className="w-6 h-6 text-orange-500" />
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700">
               Invertis University, Bareilly, Uttar Pradesh, India
             </p>
           </div>
@@ -62,10 +57,10 @@ const Contact = () => {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-200 dark:border-gray-700"
+          className="bg-white rounded-3xl shadow-xl p-8 border border-gray-200"
           onSubmit={(e) => e.preventDefault()}
         >
-          <h3 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          <h3 className="text-3xl font-bold mb-8 text-gray-900">
             Send a Message
           </h3>
 
@@ -73,19 +68,19 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
             <textarea
               placeholder="Your Message"
               rows="5"
-              className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             ></textarea>
 
@@ -105,4 +100,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

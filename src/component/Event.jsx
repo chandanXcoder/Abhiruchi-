@@ -7,7 +7,7 @@ import techFest from "../assets/techFest.png";
 import sportsDay from "../assets/sportsDay.png";
 import writingContest from "../assets/sportsDay.png";
 import socialDrive from "../assets/sportsDay.png";
-import managementExpo from"../assets/sportsDay.png";
+import managementExpo from "../assets/sportsDay.png";
 
 const Event = () => {
   const events = [
@@ -50,10 +50,7 @@ const Event = () => {
   ];
 
   return (
-    <section
-      id="events"
-      className="bg-gray-50 dark:bg-gray-900 py-20 px-4 sm:px-8 transition-colors duration-300"
-    >
+    <section id="events" className="bg-white py-20 px-4 sm:px-8 transition-colors duration-300">
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -61,12 +58,12 @@ const Event = () => {
         transition={{ duration: 0.7 }}
         className="max-w-4xl mx-auto text-center mb-20"
       >
-        <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-600">
             Events & Highlights
           </span>
         </h2>
-        <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
           Discover our most exciting festivals, competitions, and experiences that define the Abhiruchi spirit.
         </p>
       </motion.div>
@@ -89,7 +86,7 @@ const EventCard = ({ title, desc, date, image, delay, reverse }) => (
     transition={{ duration: 0.7, delay }}
     className={`flex flex-col sm:flex-row ${
       reverse ? "sm:flex-row-reverse" : ""
-    } bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300`}
+    } bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300`}
   >
     {/* 🔹 Image Section */}
     <div className="sm:w-1/2 w-full h-60 sm:h-72 overflow-hidden">
@@ -101,16 +98,10 @@ const EventCard = ({ title, desc, date, image, delay, reverse }) => (
     </div>
 
     {/* 🔹 Text Section */}
-    <div className="sm:w-1/2 w-full p-8 flex flex-col justify-center text-center sm:text-left">
-      <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-        {title}
-      </h3>
-      <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-        {desc}
-      </p>
-      <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
-        📅 {date}
-      </p>
+    <div className="sm:w-1/2 w-full p-8 flex flex-col justify-center text-center sm:text-left bg-white">
+      <h3 className="text-3xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-700 text-lg leading-relaxed mb-4">{desc}</p>
+      <p className="text-sm font-semibold text-gray-500">📅 {date}</p>
     </div>
   </motion.div>
 );
