@@ -142,3 +142,4 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
 export default About;
 
 
+
