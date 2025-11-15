@@ -140,5 +140,3 @@ export default function Hero() {
     </section>
   );
 }
-
-chand
