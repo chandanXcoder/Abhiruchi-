@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // अपनी images के सही path दो (assets folder के अंदर होने चाहिए)
-import img1 from "../assets/gallery1.jpg";
-import img2 from "../assets/gallery2.jpg";
-import img3 from "../assets/gallery3.jpg";
-import img4 from "../assets/gallery4.jpg";
-import img5 from "../assets/gallery5.jpg";
-import img6 from "../assets/gallery6.jpg";
+import img1 from "../assets/techFest.jpg";
+import img2 from "../assets/techFest.jpg";
+import img3 from "../assets/techFest.jpg";
+import img4 from "../assets/techFest.jpg";
+import img5 from "../assets/techFest.jpg";
+import img6 from "../assets/techFest.jpg";
 
 const Gallery = () => {
   const galleryItems = [
