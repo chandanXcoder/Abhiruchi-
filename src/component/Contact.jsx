@@ -21,7 +21,7 @@ const Contact = () => {
           Have questions, ideas, or feedback? We’d love to hear from you!
           Connect with the Abhiruchi team and let’s create something amazing
           together.
-        </p>
+        </p> wej
       </motion.div>
 
       {/* 🔹 Contact Info + Form */}
