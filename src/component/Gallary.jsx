@@ -121,3 +121,4 @@ const GalleryCard = ({ title, caption, img, gradient }) => (
 );
 
 export default Gallery;
+ 
