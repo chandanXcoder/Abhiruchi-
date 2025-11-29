@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* 🔹 Navigation Links */}
         <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-          {["Home", "About", "Sub Clubs", "Gallery", "Contact"].map((link) => (
+          {["Home", "About", "Gallery", "Contact"].map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase().replace(" ", "")}`}
@@ -80,8 +80,7 @@ export default function Footer() {
 
       {/* 🔹 Bottom Line */}
       <div className="relative z-10 border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Abhiruchi – The Hobby Club | Designed with 💛 by Invertis Students
-      </div>
+        © {new Date().getFullYear()} Abhiruchi – The Hobby Club | Designed by 💛 Chandan verma (I-Tech)    </div>
 
       {/* Animations */}
       <style jsx>{`
