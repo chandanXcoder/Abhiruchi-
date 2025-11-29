@@ -66,14 +66,17 @@ const About = () => {
         transition={{ duration: 0.8 }}
         className="max-w-5xl mx-auto text-center"
       >
-        <motion.img
-          src={abhiruchiLogo}
-          alt="Abhiruchi Logo"
-          className="w-72 h-72 sm:w-80 sm:h-80 rounded-full shadow-2xl bg-white p-2 mx-auto mb-8 object-cover"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        />
+        <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full shadow-2xl bg-white p-2 mx-auto mb-8 overflow-hidden flex items-center justify-center">
+          <motion.img
+            src={abhiruchiLogo}
+            alt="Abhiruchi Logo"
+            className="w-full h-full object-cover object-center"
+            style={{ transform: 'scale(1.5)' }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+        </div>
 
         <h2 className="text-5xl font-extrabold mb-6 leading-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-500">
@@ -85,7 +88,7 @@ const About = () => {
         <p className="text-lg sm:text-xl leading-relaxed text-slate-700 mb-20 max-w-3xl mx-auto">
           <strong>Abhiruchi – The Hobby Club</strong> came into existence on{" "}
           <strong>October 3, 2009</strong>, with the objective to explore
-          students’ creativity and innovation for better performance in their
+          students' creativity and innovation for better performance in their
           personal and professional lives. Spearheaded by{" "}
           <strong>Ms. Sonal Gautam</strong>, the Executive Chairperson, this
           club today stands as an integral part of Invertis University. Through
@@ -124,11 +127,14 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
     <div
       className={`sm:w-1/3 w-full h-48 sm:h-72 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center gap-4`}
     >
-      <img
-        src={logo}
-        alt={`${title} Logo`}
-        className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-md bg-white p-2"
-      />
+      <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-md bg-white p-2 overflow-hidden flex items-center justify-center">
+        <img
+          src={logo}
+          alt={`${title} Logo`}
+          className="w-full h-full object-cover object-center"
+          style={{ transform: 'scale(1.8)' }}
+        />
+      </div>
       <h3 className="text-2xl font-bold text-white text-center px-6">{title}</h3>
     </div>
 
@@ -140,5 +146,3 @@ const ClubCard = ({ title, desc, gradient, logo, reverse }) => (
 );
 
 export default About;
- 
-
