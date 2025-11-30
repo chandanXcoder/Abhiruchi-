@@ -7,7 +7,6 @@ export default function Footer() {
       {/* Animated background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent animate-pulse-slow"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent animate-pulse-slower"></div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         
         {/* 🔹 Logo + Club Name */}
