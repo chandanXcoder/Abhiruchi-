@@ -35,7 +35,7 @@ export default function Footer() {
         {/* 🔹 Social Links */}
         <div className="flex justify-center gap-6 text-gray-400">
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/8103077970"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-amber-400 transition-colors duration-300"
