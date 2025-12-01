@@ -87,10 +87,10 @@ export default function Hero() {
             className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white text-lg font-semibold rounded-full shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <span>Join Now</span>
-            <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+            <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" aria-hidden="true" />
           </button>
 
-          <button className="px-8 py-4 border-2 border-orange-400 text-orange-600 font-semibold rounded-full text-lg hover:bg-orange-50 transition-all duration-300 hover:shadow-md">
+          <button className="px-8 py-4 border-2 border-orange-400 text-orange-600 font-semibold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:bg-orange-50 hover:shadow-md">
             Explore Clubs
           </button>
         </div>
@@ -101,42 +101,9 @@ export default function Hero() {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <ChevronDown className="w-8 h-8 text-orange-500 animate-bounce" />
+          <ChevronDown className="w-8 h-8 text-orange-500 animate-bounce" aria-label="Scroll down" />
         </div>
       </div>
-
-      {/* 🔹 Animation Styles */}
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float 6s ease-in-out infinite;
-          animation-delay: 3s;
-        }
-        @keyframes fade-in {
-          0% {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-in-out;
-        }
-      `}</style>
     </section>
   );
 }
