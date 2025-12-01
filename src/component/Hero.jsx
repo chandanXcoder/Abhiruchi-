@@ -11,7 +11,7 @@ export default function Hero() {
     "Innovation",
     "Talent",
     "Excellence",
-    "Dreams",
+  
   ];
 
   useEffect(() => {
