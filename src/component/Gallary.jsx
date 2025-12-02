@@ -107,7 +107,6 @@ const GalleryCard = ({ title, caption, img, gradient }) => (
       <div
         className={`absolute inset-0 bg-gradient-to-t ${gradient} opacity-60`}
       ></div>
-
       <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white drop-shadow-xl">
         {title}
       </h3>
