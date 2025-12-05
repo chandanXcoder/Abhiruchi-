@@ -21,7 +21,7 @@ const Gallery = () => {
       title: "Cultural Night",
       caption: "Vibrant performances by Rock On club.",
       img: img2,
-      gradient: "from-red-400 to-red-500",
+      gradient: "from-red-400 to-red-500 ",
     },
     {
       title: "Tech Fair",
