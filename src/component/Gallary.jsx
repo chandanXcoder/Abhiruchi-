@@ -24,7 +24,7 @@ const Gallery = () => {
       gradient: "from-red-400 to-red-500 ",
     },
     {
-      title: "IOT",
+      title: "IOT War ",
       caption: "Innovative projects presented by I-Tech club.",
       img: img3,
       gradient: "from-blue-400 to-blue-500",
